@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/game_nav"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.advnmpproj.adv160818008homeworkweek2.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/actionResultFrag"
+            app:destination="@id/resultFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.advnmpproj.adv160818008homeworkweek2.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <action
+            android:id="@+id/actionMainFrag"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@android:anim/fade_out" />
+        <argument android:name="player_score"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+</navigation>
