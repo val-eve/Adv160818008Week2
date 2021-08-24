@@ -8,8 +8,8 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.advnmpproj.adv160818008homeworkweek2.MainFragment"
-        android:label="fragment_main"
-        tools:layout="@layout/fragment_main" >
+        android:label="Main Screen"
+        tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/actionResultFrag"
             app:destination="@id/resultFragment"
@@ -18,14 +18,15 @@
     <fragment
         android:id="@+id/resultFragment"
         android:name="com.advnmpproj.adv160818008homeworkweek2.ResultFragment"
-        android:label="fragment_result"
-        tools:layout="@layout/fragment_result" >
+        android:label="Game Over Screen"
+        tools:layout="@layout/fragment_result">
         <action
             android:id="@+id/actionMainFrag"
             app:destination="@id/mainFragment"
             app:enterAnim="@android:anim/fade_out" />
-        <argument android:name="player_score"
-            app:argType="integer"
-            android:defaultValue="0" />
+        <argument
+            android:name="player_score"
+            android:defaultValue="0"
+            app:argType="integer" />
     </fragment>
 </navigation>
